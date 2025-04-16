@@ -30,7 +30,7 @@ getData();
 </script>
 
 <template>
-
+    
 </template>
 
 <style scoped>
