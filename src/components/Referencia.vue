@@ -33,7 +33,7 @@ const getReferencies = async(tema) =>{
 </script>
 
 <template>
-
+    
 </template>
 
 <style scoped>
