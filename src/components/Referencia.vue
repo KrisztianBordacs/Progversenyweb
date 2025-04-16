@@ -6,26 +6,29 @@ import Referencia from '../classes/Referencia';
 const store = referenciesStore();
 const api = " https://reeldev.hu/api/nyomda/referenciak";
 
-const getData = async() => {
-    await axios.get(api)
-    .then(response => {
-        for (let i = 0; i < response.data.length; i++){
-            let nev = response.data[i].nev;
-            let megrendelo = response.data[i].megrendelo;
-            let meret = response.data[i].meret;
-            let szinek = response.data[i].szinek;
-            let darabszam = response.data[i].darabszam;
-            let papirminoseg = response.data[i].papirminoseg;
-            let kivitelezes = response.data[i].kivitelezes;
-            let tema = response.data[i].tema;
-            let kep = response.data[i].kep;
+const getData = async(data) => {
+        for (let i = 0; i < data.length; i++){
+            let nev = data[i].nev;
+            let megrendelo =data[i].megrendelo;
+            let meret = data[i].meret;
+            let szinek = data[i].szinek;
+            let darabszam = data[i].darabszam;
+            let papirminoseg = data[i].papirminoseg;
+            let kivitelezes = data[i].kivitelezes;
+            let tema = data[i].tema;
+            let kep = data[i].kep;
 
             let referencia = new Referencia(nev,megrendelo,meret,szinek, darabszam, papirminoseg, kivitelezes, tema, kep);
             store.addItem(referencia);
         }
+}
+const getReferencies = async(tema) =>{
+    await axios.get(api)
+    .then(response => {
+        var temp = response.data.filter((element) => element.tema.indexOf(tema) > -1);
+        getData(temp)
     })
 }
-getData();
 
 </script>
 
