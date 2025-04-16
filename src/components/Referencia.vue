@@ -2,6 +2,8 @@
 import axios from 'axios';
 import { referenciesStore } from '../store/store';
 import Referencia from '../classes/Referencia';
+import Oldalsav from './Aside.vue'
+
 
 const store = referenciesStore();
 const api = " https://reeldev.hu/api/nyomda/referenciak";
@@ -19,9 +21,8 @@ const getData = async(data) => {
             let tema = data[i].tema;
             let kep = data[i].kep;
 
-            let referencia = new Referencia(nev, megrendelo, meret,szinek, darabszam, papirminoseg, kivitelezes, tema, kep);
+            let referencia = new Referencia(nev, megrendelo, meret, szinek, darabszam, papirminoseg, kivitelezes, tema, kep);
             store.addItem(referencia);
-            console.log(referencia);
         }
 }
 const getReferencies = async(nev) =>{
@@ -29,12 +30,12 @@ const getReferencies = async(nev) =>{
     .then(response => {
         var temp = response.data.filter((element) => element.nev.indexOf(nev) > -1);
         getData(temp)
-        console.log(temp);
     })
     .catch(error => {
         console.log("Error: " + error);
     });
 }
+getReferencies("");
 </script>
 
 <template>
@@ -50,12 +51,19 @@ const getReferencies = async(nev) =>{
 
                 <div class="list ">
                     <ul class="d-flex ">
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3" @click="getReferencies('')">Mind</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('kártya')">Névkártya</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('Csomagolás')">Csomagolás</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('Meghívó')">Cimke</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('Katalógus')">Prospektus</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('lap')">Flyer</li>
+                        <img src="../assets/images/pipa-active.png " alt="pipa ">
                         <li class="mx-3 " @click="getReferencies('át')">Egyéb</li>
                     </ul>
                 </div>
@@ -91,21 +99,8 @@ const getReferencies = async(nev) =>{
                 </ul>
             </nav>
 
-            <aside>
-                <section>
-                    <form>
-                        <div class="mb-3 ">
-                            <label for="exampleInputEmail1 " class="form-label ">Email address</label>
-
-                            <div id="emailHelp " class="form-text ">Adja meg telefonszámát és kollégáink egyorán belül visszahívják önt:</div>
-                            <input type="email " class="form-control " id="exampleInputEmail1 " aria-describedby="emailHelp ">
-                            <button type="button " class="btn ">Elküldöm</button>
-                        </div>
-                    </form>
-                </section>
-
-                <article></article>
-            </aside>
+            <Oldalsav />
+            
         </div>
 
 </template>

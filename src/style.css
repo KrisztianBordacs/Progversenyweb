@@ -1,39 +1,44 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-body{
-  font-family: "Open Sans", sans-serif;
-  font-weight:400;
-  font-size: 16px;
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-footer h3,h2 span{
-  color: #ffef02!important;
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.nav-item, .col-lg-4 h3,.nyomda-online-logo p{
-  font-weight:600;
+footer h3,
+h2 span {
+    color: #ffef02!important;
 }
 
-.nyomda-online-logo span{
-  color: rgb(0, 170, 255);
+.nav-item,
+.col-lg-4 h3,
+.nyomda-online-logo p {
+    font-weight: 600;
 }
 
-.connection, .navbar, .nyomda-online-logo,.list,ul{
-  align-items: center!important;
+.nyomda-online-logo span {
+    color: rgb(0, 170, 255);
+}
+
+.connection,
+.navbar,
+.nyomda-online-logo,
+.list,
+ul {
+    align-items: center!important;
 }
 
 .connection{
@@ -50,8 +55,9 @@ button, .connection{
   justify-content: center;
 }
 
-nav li,.nyomda-online-logo p{
-  text-transform: uppercase;
+nav li,
+.nyomda-online-logo p {
+    text-transform: uppercase;
 }
 
 .nyomda-online-logo p, .nyomda-online-logo img, .nyomda-online-logo, .product-card, .ask-form,.partners {
@@ -71,19 +77,25 @@ button,.navbar input, .footer-nav{
   border: none;
 }
 
-.nyomda-online-logo img{
-  border-right: 1px solid rgb(0, 0, 0);
-}
-.connection div p{
-  margin:0px 10px;
+.nyomda-online-logo img {
+    border-right: 1px solid rgb(0, 0, 0);
 }
 
-.dropdown-item, .navbar, a.nav-link,.navbar input, footer p,h2{
-  color: #fff !important;
+.connection div p {
+    margin: 0px 10px;
+}
+
+.dropdown-item,
+.navbar,
+a.nav-link,
+.navbar input,
+footer p,
+h2 {
+    color: #fff !important;
 }
 
 .list li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .list{
@@ -104,8 +116,8 @@ h2{
   background-position: center;
 }
 
-header{
-  background-image: url("../src/assets/images/header-bg.png");
+header {
+    background-image: url("../src/assets/images/header-bg.png");
 }
 
 .ask-form{
