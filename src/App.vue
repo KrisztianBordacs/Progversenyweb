@@ -1,6 +1,7 @@
 <script setup>
 import Navigation from './components/Navigation.vue';
 import Lablec from './components/Footer.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import Lablec from './components/Footer.vue';
   <Navigation />
 </header>
 <main>
-  <router-view />
+  <RouterView />
 </main>
 <footer>
  <Lablec />

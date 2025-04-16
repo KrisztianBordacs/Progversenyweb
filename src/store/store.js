@@ -12,8 +12,12 @@ export const referenciesStore = defineStore("referecies", () => {
         return referecies.value;
     }
 
+    function removeItems() {
+        referecies.value = [];
+    }
     return {
         addItem,
-        getItems
+        getItems,
+        removeItems
     }
 })

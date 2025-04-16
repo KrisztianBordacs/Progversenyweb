@@ -5,12 +5,8 @@ import Referencia from '../components/Referencia.vue';
 
 const routes = [
     { path: '/', component: Home },
-    { path: '/Referencia', component: Referencia },
+    { path: '/referencia', component: Referencia },
 ];
 
-const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes
-});
-
+const router = createRouter({ history: createWebHistory(), routes });
 export default router;
