@@ -3,6 +3,7 @@ import axios from 'axios';
 import { referenciesStore } from '../store/store';
 import Referencia from '../classes/Referencia';
 
+
 const store = referenciesStore();
 const api = " https://reeldev.hu/api/nyomda/referenciak";
 
@@ -19,9 +20,8 @@ const getData = async(data) => {
             let tema = data[i].tema;
             let kep = data[i].kep;
 
-            let referencia = new Referencia(nev, megrendelo, meret,szinek, darabszam, papirminoseg, kivitelezes, tema, kep);
+            let referencia = new Referencia(nev, megrendelo, meret, szinek, darabszam, papirminoseg, kivitelezes, tema, kep);
             store.addItem(referencia);
-            console.log(referencia);
         }
 }
 const getReferencies = async(nev) =>{
@@ -29,7 +29,6 @@ const getReferencies = async(nev) =>{
     .then(response => {
         var temp = response.data.filter((element) => element.nev.indexOf(nev) > -1);
         getData(temp)
-        console.log(temp);
     })
     .catch(error => {
         console.log("Error: " + error);
