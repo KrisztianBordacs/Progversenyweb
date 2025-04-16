@@ -12,21 +12,93 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+  font-family: "Open Sans", sans-serif;
+  font-weight:400;
+  font-size: 16px;
+}
+
+footer h3,h2 span{
+  color: #ffef02!important;
+}
+
+.nav-item, .col-lg-4 h3,.nyomda-online-logo p{
+  font-weight:600;
+}
+
+.nyomda-online-logo span{
+  color: rgb(0, 170, 255);
+}
+
+.connection, .navbar, .nyomda-online-logo,.list,ul{
+  align-items: center!important;
+}
 
 .connection{
   background-color:#ffef02;
+  padding: 0px;
   color: #000;
   justify-content: space-around;
 }
 
+.nyomda-online-logo,.nav-item,.list{
+  justify-content: center;
+}
+
+nav li,.nyomda-online-logo p{
+  text-transform: uppercase;
+}
+
+.nyomda-online-logo p, .nyomda-online-logo img, .nyomda-online-logo{
+  padding: 30px;
+}
+
+.navbar,.nav-item{
+  background-color: #000;
+}
+
+.navbar input, .footer-nav{
+  background-color: #383838;
+  border: none;
+}
+
+.nyomda-online-logo img{
+  border-right: 1px solid rgb(0, 0, 0);
+}
 .connection div p{
   margin:0px 10px;
 }
 
-.dropdown-item, .navbar{
+.dropdown-item, .navbar, a.nav-link,.navbar input, footer p,h2{
   color: #fff !important;
 }
 
 .product-card img{
   width: 300px;
+}
+
+.list li {
+  list-style-type: none;
+}
+
+.list{
+border-top: #242424 1px solid;
+border-bottom: #242424 1px solid;
+background-color: #ccc;
+}
+
+footer{
+  background-image: url("../src/assets/images/footer-bg.jpg");
+}
+
+h2{
+  background-image: url("../src/assets/images/nyomdai-termekek-bg.jpg");
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+header{
+  background-image: url("../src/assets/images/header-bg.png");
 }
